@@ -42,7 +42,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	}
 	else
 	{
-		checker = tree_is_perfect(tree);
+		checker = perfect_tree_loop(tree);
 		if (checker != 0)
 		{
 			return (1);
