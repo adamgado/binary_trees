@@ -6,9 +6,10 @@
  */
 int perfect_tree_loop(const binary_tree_t *tree)
 {
-	int left_factor = 0, right_factor = 0;
+	int left_factor = 0;
+	int right_factor = 0;
 
-	if (tree->left && tree->right)
+	if (tree->left != NULL && tree->right != NULL)
 	{
 		left_factor = 1 + perfect_tree_loop(tree->left);
 		right_factor = 1 + perfect_tree_loop(tree->right);
@@ -18,7 +19,7 @@ int perfect_tree_loop(const binary_tree_t *tree)
 		}
 		return (0);
 	}
-	else if (!tree->left && !tree->right)
+	else if (tree->left == NULL && tree->right == NULL)
 	{
 		return (1);
 	}
