@@ -10,8 +10,8 @@ int perfect_tree_loop(const binary_tree_t *tree)
 
 	if (tree->left && tree->right)
 	{
-		left_factor = 1 + tree_is_perfect(tree->left);
-		right_factor = 1 + tree_is_perfect(tree->right);
+		left_factor = 1 + perfect_tree_loop(tree->left);
+		right_factor = 1 + perfect_tree_loop(tree->right);
 		if (right_factor == left_factor && right_factor != 0 && left_factor != 0)
 		{
 			return (right_factor);
