@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * tree_is_perfect - checks if a binary tree is full
+ * perfect_tree_loop - check if a binary tree is full
  * @tree: pointer to the root node of the tree to check
  * Return: level of height or 0 if tree is not perfect
  */
